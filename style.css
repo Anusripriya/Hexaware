@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000;
+  color: #fff;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: 600;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation a {
+  position: relative;
+  color: #fff;
+  margin-left: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: #00ffcc;
+}
+
+.navigation a span {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #00ffcc;
+  transition: 0.4s ease;
+}
+
+.navigation a:hover span {
+  width: 100%;
+}
+
+/* Parallax Section */
+.parallax {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1618005198919-d3d4b5f1da26?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#text {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.home-button {
+  padding: 12px 25px;
+  background: #00ffcc;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.home-button:hover {
+  background: #00ccaa;
+}
+
+  
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f1117;
+    color: #fff;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1c1f26;
+    border-bottom: 2px solid #292d36;
+  }
+  
+  h1 {
+    color: #4e9bff;
+    margin: 0;
+  }
+  
+  p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Cards and Layout */
+  .dashboard-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-card {
+    background-color: #1e212a;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 40%;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  button {
+    background-color: #4e9bff;
+    border: none;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #317be7;
+  }
+  
+  .back-btn {
+    margin: 1rem;
+  }
+  
+  /* Hidden Sections */
+  .hidden {
+    display: none;
+  }
+  
+  /* AR Dashboard */
+  .workflow {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .step {
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .step.completed {
+    background-color: #4caf50;
+  }
+  
+  .step.in-progress {
+    background-color: #2196f3;
+  }
+  
+  .status-box {
+    margin: 1rem 0;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.pending {
+    color: orange;
+  }
+  
+  .status.in-progress {
+    color: #2196f3;
+  }
+  
+  .status.completed {
+    color: #4caf50;
+  }
+  
+  .profile {
+    background-color: #1a1c23;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #4e9bff;
+  }
+  
+  .score {
+    color: #4e9bff;
+    font-weight: bold;
+  }
+  
+  /* Admin Console */
+  .job-listing {
+    padding: 1rem 2rem;
+  }
+  
+  .job-card {
+    background-color: #1a1c23;
+    padding: 1rem;
+    border-left: 5px solid #4e9bff;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+  }
+  
+  .job-card.in-progress .status {
+    color: #2196f3;
+  }
+  
+  .job-card.completed .status {
+    color: #4caf50;
+  }
+  
+  .job-card.pending .status {
+    color: orange;
+  }
+
+  .key-features {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+  
+  .features-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .feature-box {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: #1c1c1c;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-8px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .feature-box h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .feature-box p {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  /* Icon Colors */
+  .green { color: #4caf50; }
+  .orange { color: #ff9800; }
+  .blue { color: #2196f3; }
+  
+  

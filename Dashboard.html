@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TalentSync Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>HireWise Dashboard</h1>
+    <p>Document Similarity Comparison and Ranking System for Recruitment</p>
+  </header>
+
+  <!-- Home Page -->
+  <main id="homePage">
+    <section class="dashboard-section">
+      <div class="dashboard-card">
+        <h2>AR Requestor Dashboard</h2>
+        <p>Track job description analysis, view top consultant matches, and monitor workflow progress.</p>
+        <ul>
+          <li>📄 Job Description Comparison Status</li>
+          <li>👤 Top 3 Matching Consultant Profiles</li>
+          <li>📊 Real-time Progress Tracking</li>
+        </ul>
+        <button onclick="navigateTo('arDashboard')">Access Dashboard →</button>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Recruiter Admin Console</h2>
+        <p>Manage job descriptions, monitor system performance, and generate comprehensive reports.</p>
+        <ul>
+          <li>🔍 Search & Filter Job Descriptions</li>
+          <li>📈 System Monitoring & Analytics</li>
+          <li>📤 Report Generation & Export</li>
+        </ul>
+        <button onclick="navigateTo('adminConsole')">Access Console →</button>
+      </div>
+    </section>
+
+        
+      
+  </main>
+
+  <!-- AR Dashboard -->
+  <section id="arDashboard" class="hidden">
+    <button class="back-btn" onclick="navigateTo('homePage')">← Back</button>
+    <h2>AR Requestor Dashboard</h2>
+    <div class="status-box">
+      Status: <span class="status pending">Pending</span>
+    </div>
+    <div class="workflow">
+      <div class="step completed">✅ JD Compared</div>
+      <div class="step in-progress">🔵 Profiles Ranked</div>
+      <div class="step">✉️ Email Sent</div>
+    </div>
+    <div class="profiles">
+      <div class="profile">
+        <h3>Michael Rodriguez</h3>
+        <p><strong>DevOps Engineer</strong> – 5+ years</p>
+        <p>Location: Austin, TX</p>
+        <p>Skills: Docker, Kubernetes, AWS, Terraform</p>
+        <p>Match Score: <span class="score">89%</span></p>
+      </div>
+      <div class="profile">
+        <h3>Emily Johnson</h3>
+        <p><strong>Frontend Developer</strong> – 4+ years</p>
+        <p>Location: New York, NY</p>
+        <p>Skills: React, Vue.js, TypeScript, CSS</p>
+        <p>Match Score: <span class="score">82%</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Console -->
+  <section id="adminConsole" class="hidden">
+    <button class="back-btn" onclick="navigateTo('homePage')">← Back</button>
+    <h2>Recruiter Admin Console</h2>
+    <div class="job-listing">
+      <div class="job-card in-progress">
+        <h3>Senior Full Stack Developer</h3>
+        <p>Experience: 5+ years | Matches: 12 | Submitted: 2024-01-15</p>
+        <p>Skills: React, Node.js, AWS</p>
+        <p>Status: <span class="status in-progress">In Progress</span></p>
+      </div>
+      <div class="job-card completed">
+        <h3>DevOps Engineer</h3>
+        <p>Experience: 3+ years | Matches: 8 | Submitted: 2024-01-14</p>
+        <p>Skills: Docker, Kubernetes, Terraform</p>
+        <p>Status: <span class="status completed">Completed</span></p>
+      </div>
+      <div class="job-card pending">
+        <h3>Frontend Developer</h3>
+        <p>Experience: 2+ years | Matches: 15 | Submitted: 2024-01-13</p>
+        <p>Skills: React, TypeScript, CSS</p>
+        <p>Status: <span class="status pending">Pending</span></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
